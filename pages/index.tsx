@@ -39,9 +39,9 @@ const Home: NextPage = () => {
           : (
             <div className={styles.listContainer}>
               {
-                data && data.results && data.results.map(({ name }) => (
-                  <div onClick={() => router.push(`/pokemon/${name}`)} className={styles.list} key={name}>
-                    <h1 >{name}</h1>
+                data && data.results && data.results.map((result:any) => (
+                  <div onClick={() => router.push(`/pokemon/${result.name}`)} className={styles.list} key={result.name}>
+                    <h1 >{result.name}</h1>
                   </div>
                 ))
               }
